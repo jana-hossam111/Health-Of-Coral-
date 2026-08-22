@@ -399,51 +399,20 @@ These values work for the current testing conditions but may not generalize perf
 This became one of the main motivations for the next development stage.
 
 ---
-
-# 📊 7. Results
-
-The system produces several intermediate and final outputs for visual evaluation.
-
-### SIFT Matches
-
-![SIFT Matches](images/sift_matches.png)
-
-### RANSAC Inliers
-
-![RANSAC Inliers](images/ransac_inliers.png)
-
-### Final Alignment
-
-![Final Alignment](images/final_alignment.png)
-
-### Coral Masks
-
-![Coral Masks](images/coral_masks.png)
-
-### Change Masks
-
-![Change Masks](images/change_masks.png)
-
-### Final Detection
-
-![Final Result](images/final_result.png)
-
-The final output reports the number of detected regions for each category:
-
-# 🚧 8. Current Limitations
+# 🚧 7. Current Limitations
 
 Although the current pipeline works on the tested image conditions, there are still important cases that need to be addressed before considering the system robust for general coral monitoring.
 
 ---
 
-## 18.1 Underwater Image Conditions
+## 7.1 Underwater Image Conditions
 
 The system still needs to be tested more extensively on real underwater images 
 The current HSV thresholds may not generalize to all underwater conditions.
 
 ---
 
-## 18.2 Coral Located Inside a Larger Image
+## 7.2 Coral Located Inside a Larger Image
 
 The current pipeline is strongly dependent on detecting coral-related visual information.
 
@@ -466,7 +435,7 @@ This would prevent unrelated background regions from participating in the change
 
 ---
 
-## 18.3 Different Backgrounds
+## 7.3 Different Backgrounds
 
 Another important case is when BEFORE and CURRENT images have significantly different backgrounds.
 
@@ -485,37 +454,4 @@ In this situation, background-based assumptions can become unreliable.
 The next version should therefore become more **coral-centric** rather than relying heavily on the image border or global background appearance.
 
 ---
-
-# 🚀 9. Future Improvements
-
-The next development stage will focus on improving robustness and reducing dependency on fixed thresholds.
-
-- 🌊 Improve underwater color correction.
-- 🪸 Explicitly detect and segment the coral colony.
-- 🏞️ Make the system robust to different backgrounds.
-- 📍 Handle coral located anywhere inside the image.
-- 🎨 Reduce dependency on fixed HSV thresholds.
-- 🌈 Support a wider range of coral colors.
-- 🧠 Investigate learning-based coral segmentation.
-- 🌊 Validate the pipeline on real underwater image sequences.
-
----
-
-# 🧰 10. Technologies
-
-The project currently uses:
-
-- **Python**
-- **OpenCV**
-- **NumPy**
-- **Matplotlib**
-- **SIFT**
-- **RANSAC**
-- **ECC**
-- **HSV Color Segmentation**
-- **LAB Color Space**
-- **Morphological Image Processing**
-
----
-
 > **The current version establishes the core computer-vision pipeline. The next stage is focused on making it robust enough for real-world underwater coral monitoring.**
